@@ -14,5 +14,5 @@ function sortByDate(descending=false){
     }
 }
 
-console.log(sortByDate())
-console.log(sortByDate(true))
+// console.log(sortByDate())
+// console.log(sortByDate(true))
