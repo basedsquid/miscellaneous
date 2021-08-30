@@ -1,8 +1,12 @@
 body {
+    position: absolute;
     margin: 0;
     background-color: #1F1F26;
     height:100vh;
     width:100vw;
+    display:flex;
+    flex-direction: column;
+    z-index:0;
 
 }
 header{
@@ -10,29 +14,49 @@ header{
     color: #3E424A;
     font-family: 'JetBrains Mono';
     font-size: 100pt;
+    z-index: 2;
 }
 #everythingelse{
-    padding-bottom: 15pt;
-    display:flex;
+    z-index: -1;
+    position:initial;
+    height: 90vh;
+    /* padding-bottom: 15pt; */
+    /* display:flex;
     flex-direction: row;
     justify-content:space-between;
-    align-items: flex-end;    
+    align-items: flex-end;     */
 }
 #sidebar{
+    z-index: inherit;
     /* margin-bottom: 20pt; */
+    /* vertical-align: middle; */
+    bottom:10pt;
     padding:15px;
     width: 280pt;
-    height: 80vh;
-    /* position: absolute; */
-    background-color: #09090fcb;
-    display: flex;
+    height: 71.5em;
+    position: absolute;
+    background-color: #09090fa2;
+    /* display: flex;
     flex-direction: column;
+    align-content:center; */
+    /* justify-content: space-between; */
+    /* align-items: flex-end; */
     border-radius: 0px 15px 15px 0px; 
     border: 0px solid #800000;
 }
-#sidebar>button{
+#buttons{
+    z-index: 3;
+    width:275pt;
+    height: 30em;
+    float: left;
+    display: flex;
+    flex-direction: column;
+    align-items: space-around;
+}
+#buttons>button{
+    /* position: absolute; */
     color:#ceceeb7c;
-    left: 0pt;
+    /* text-indtexent: 0pt; */
     font-family: 'Roboto Mono';
     font-weight: 200;
     font-style: italic;
@@ -40,12 +64,11 @@ header{
     background-color: #80000000;
     border: 0px solid;
     text-align: right;
-    transition: offset 0.25s ease-out;
 }
-#sidebar>button:hover{
-    offset: -10pt;
-
-}
-main{
+#buttons>button:hover{
+    transition-property: background-color;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-out;
+    background-color: rgb(95, 95, 95);
 
 }
