@@ -1,9 +1,10 @@
 <html>
     <head>
-        <title>_misc</title>
+        <title>_misc</title>        
+        <link rel="stylesheet" type="text/css" href="index.css">
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@1,300&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@200&family=Roboto+Mono:ital,wght@1,300&display=swap" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="index.css">
+
         <link rel="icon" type="image/png" href="misclogo.png">
         <script src="index.js" defer></script>
     </head>
@@ -25,13 +26,18 @@
                 <button id="sculpt">sculpture</button>
                 <button id="writing">writing</button>
                 <button id="video">video</button>
+                <div id="spacer"></div>
+                <button id="contact">contact</button>
             </div>
             <main>
+                <div id="entrydisplay">
+
+                </div>
                 <label for="sort">sort by...</label>
                 <select id="sort">
-                    <option value="dateAsc" onclick="sortByDate()">old to new</option>
-                    <option value="dateDesc" onclick="sortByDate(true)">new to old</option>
-                    <option value="abc">alphabetic</option>
+                    <option value="dateAsc" onclick="datesort()">old to new</option>
+                    <option value="dateDesc" onclick="datesort(true)">new to old</option>
+                    <option value="abc" onclick="sortalpha()">alphabetic</option>
                 </select>
             </main>
         </div>
